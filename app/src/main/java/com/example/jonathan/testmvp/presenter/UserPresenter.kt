@@ -5,7 +5,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 class UserPresenter {
-    private val _userState = MutableStateFlow(User("Jane Doe", "jane.doe@example.com"))
+    private val _userState = MutableStateFlow(User(
+        "Jane Doe",
+        26))
     val userState: StateFlow<User> = _userState
 
     fun updateUserName(newName: String) {
